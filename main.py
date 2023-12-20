@@ -11,11 +11,10 @@ def execute_query(connection, query, params=None):
 def connect_to_database():
     try:
         connection = mysql.connector.connect(
-            host='ваш_хост',
-            port=ваш_порт,
-            database='ваша_бд',
-            user='ваш_пользователь',
-            password='ваш_пароль',
+           host='107.0.0.1',
+            port=3306,
+            database='dbt10',
+            user='root'
         )
         return connection
     except mysql.connector.Error as err:
